@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>4D Software — Asistente de Calificación de Leads</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-mark">4D</div>
+      <div>
+        <div class="brand-name">4D Software &amp; Soluciones</div>
+        <div class="brand-tag">Prototipo — Asistente de calificación de leads</div>
+      </div>
+    </div>
+    <div class="pill"><span class="dot-live"></span> Demo en vivo</div>
+  </div>
+
+  <h1>Deja que la IA precalifique el lead antes de que tu equipo levante el teléfono</h1>
+  <p class="sub">El visitante conversa de forma natural sobre su proyecto. Mientras responde, el asistente arma en tiempo real un brief estructurado.</p>
+
+  <div class="grid">
+    <div class="chat-card">
+      <div class="chat-head">
+        <div class="avatar">🤖</div>
+        <div>
+          <div class="name">Asistente 4D</div>
+          <div class="status"><span class="d"></span> En línea · responde en segundos</div>
+        </div>
+      </div>
+      <div class="msgs" id="msgs"></div>
+      <div class="composer">
+        <input id="input" type="text" placeholder="Escribe tu mensaje..." autocomplete="off"/>
+        <button id="send">Enviar</button>
+      </div>
+    </div>
+
+    <div class="brief-card">
+      <div class="brief-top">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="brief-filename">brief.json</div>
+      </div>
+      <div class="brief-body">
+        <div class="prog-label"><span>Brief del proyecto</span><span id="progPct">0%</span></div>
+        <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+        <div class="field"><span class="k">tipo_proyecto</span><div class="v empty" id="f_tipo">—</div></div>
+        <div class="field"><span class="k">alcance</span><div class="v empty" id="f_alcance">—</div></div>
+        <div class="field"><span class="k">presupuesto</span><div class="v empty" id="f_presupuesto">—</div></div>
+        <div class="field"><span class="k">plazo</span><div class="v empty" id="f_plazo">—</div></div>
+        <div class="field"><span class="k">contacto</span><div class="v empty" id="f_contacto">—</div></div>
+        <div class="field"><span class="k">urgencia</span><br><span class="urgency baja" id="f_urgencia">sin definir</span></div>
+      </div>
+      <div class="brief-foot">
+        <a class="cta" id="ctaBtn" target="_blank" rel="noopener">📲 Enviar brief al equipo por WhatsApp</a>
+        <div class="hint" id="ctaHint">El brief se completa a medida que conversas.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-note">Prototipo funcional — usa la API de Claude en vivo.</p>
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>
